@@ -6,7 +6,9 @@ import { Header } from './App.styled';
 import { Container } from 'CommonStyled/Common.styled';
 import { HomePage } from './pages/HomePage/HomePage';
 
-import MovieDetailsPage from './pages/MovieDetailsPage/MovieDetailsPage';
+const MovieDetailsPage = lazy(() =>
+  import('./pages/MovieDetailsPage/MovieDetailsPage')
+);
 
 const MoviesPage = lazy(() =>
   import('./pages/MoviePage/MoviePage' /*webpackChunkName: 'MoviePage' */)

@@ -15,7 +15,7 @@ export const ImageThumb = styled.div`
 export const Image = styled.img`
   display: block;
   width: 100%;
-  width: 500px;
+  //   width: 300px;
   height: auto;
 `;
 

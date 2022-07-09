@@ -22,7 +22,8 @@ const Review = lazy(() =>
 
 export default function MovieDetailsPage() {
   const [data, setData] = useState(null);
-  const [path, setPath] = useState('/');
+  const location = useLocation();
+  const [path] = useState(location?.state?.from + location?.state?.search);
   const { movieId } = useParams();
 
   useEffect(() => {
@@ -32,13 +33,11 @@ export default function MovieDetailsPage() {
     };
   }, [movieId]);
 
-  const location = useLocation();
+  // useEffect(() => {
+  //   setPath();
 
-  useEffect(() => {
-    setPath(location?.state?.from + location?.state?.search);
-
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  //   // eslint-disable-next-line react-hooks/exhaustive-deps
+  // }, []);
 
   return (
     <>

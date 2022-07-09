@@ -82,5 +82,12 @@ export function Gallery({ data }) {
 }
 
 Gallery.propTypes = {
-  data: PropTypes.object.isRequired,
+  data: PropTypes.shape({
+    id: PropTypes.number,
+    poster_path: PropTypes.string,
+    original_title: PropTypes.string,
+    vote_average: PropTypes.number,
+    release_date: PropTypes.number,
+    genre_ids: PropTypes.number,
+  }).isRequired,
 };

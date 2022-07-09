@@ -91,4 +91,3 @@ Gallery.propTypes = {
     genre_ids: PropTypes.number,
   }).isRequired,
 };
-// asas

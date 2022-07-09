@@ -3,7 +3,7 @@ import * as movieAPI from '../../../services/movie-api';
 import { Gallery } from 'components/Gallery/Gallery';
 
 import { SearchForm, Button, Label, Input } from './MoviesPage.styled';
-import { useSearchParams, useLocation, sear } from 'react-router-dom';
+import { useSearchParams, useLocation } from 'react-router-dom';
 
 const NotFoundPage = lazy(() => import('../NotFound/NotFoundPage.jsx'));
 
